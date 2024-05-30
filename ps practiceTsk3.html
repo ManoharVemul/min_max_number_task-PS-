@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./mfavcon.png">
+</head>
+<body>
+    <pre><h1>Practice work
+
+        1) Write a program to print the reverse of a number
+        input: 218
+        output: 812
+        
+        input:-210
+        output: -12
+        
+        2) Write a program to print min,max and followed by rest of the numbers
+        
+        input: 13675
+        output: 17365
+        
+        
+        3) Write a program to check whether a number is palindrome or not.
+        
+        input: 121
+        output: 121 is palindrome
+        
+        input: 467
+        output: 467 is not a palindrome</h1></pre>
+
+<script>
+
+    // promblem 1
+let n1 = +prompt("enter the number +ve or -ve");
+
+let nn = Math.abs(n1)+"";
+var s="";
+console.log(nn)
+
+for (i=nn.length-1;i>=0;i--) {
+   s = s+nn[i];
+
+}
+console.log(s)
+console.log("reversed number"+s*(-1))
+//problem 2
+
+
+let n2 = +prompt("enter the number  : ")+"";
+max=n2[0];
+min=n2[0]
+for (i=0;i<n2.length;i++){
+    if(n2[i]>max){
+     max=n2[i];  
+    }
+     if(n2[i]<min){
+     min=n2[i];  
+    }
+    
+}
+let s = "";
+for (i=0;i<n2.length;i++){
+    if(max!=n2[i]&&min!=n2[i]){
+        s=s+n2[i];
+    }
+}
+    console.log(min+min+s)
+
+//problem 3
+let n3 = +prompt("enter the number +ve  :  ");
+
+let nn3 = n3 +"";
+let count=0
+for(i=0;i<nn3.length;i++){
+
+    if(nn3[i]===nn3[nn3.length-1-i]){
+        count++
+    } 
+}
+if(count === nn3.length)
+{
+   console.log(`${nn3} is palindram`);
+    } else {
+        console.log(`${nn3} is palindram`);
+    }
+
+
+</script>
+
+
+</body>
+</html>
